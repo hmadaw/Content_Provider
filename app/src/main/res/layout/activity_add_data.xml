@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Views.AddData">
+
+    <EditText
+        android:id="@+id/name_Add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="11"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:elevation="10dp"
+        android:background="@drawable/shap"
+        android:drawableStart="@android:drawable/ic_menu_info_details"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.281" />
+
+    <EditText
+        android:id="@+id/phone_Add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="11"
+        android:hint="Phone"
+        android:background="@drawable/shap"
+        android:inputType="phone"
+        android:elevation="10dp"
+        android:drawableStart="@android:drawable/ic_menu_call"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_Add"
+        app:layout_constraintVertical_bias="0.068" />
+
+    <Button
+        android:id="@+id/button_Add"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:stateListAnimator="@android:anim/cycle_interpolator"
+        android:text="Add"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone_Add"
+        app:layout_constraintVertical_bias="0.181" />
+</androidx.constraintlayout.widget.ConstraintLayout>
