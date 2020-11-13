@@ -1,24 +1,17 @@
 package com.example.content_provider.Controler;
 
 import android.content.ContentProvider;
-import android.content.ContentUris;
 import android.content.ContentValues;
-import android.content.Context;
 import android.content.UriMatcher;
 import android.database.Cursor;
-import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteQueryBuilder;
 import android.net.Uri;
-import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.example.content_provider.Model.Data;
+import com.example.content_provider.Model.DataA;
 import com.example.content_provider.Utils.Utils;
-
-import java.util.HashMap;
 
 public class DataProvider extends ContentProvider {
     static final String PROVIDER_NAME = "com.example.content_provider.Controler.DataProvider";
@@ -27,7 +20,7 @@ public class DataProvider extends ContentProvider {
 
     private SQLiteDatabase db;
     DataBaseHelper dbHelper ;
-    Data data ;
+    DataA dataA;
 
     @Override
     public boolean onCreate() {

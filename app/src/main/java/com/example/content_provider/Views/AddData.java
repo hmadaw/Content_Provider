@@ -10,7 +10,7 @@ import android.widget.EditText;
 
 import com.example.content_provider.Controler.DataBaseHelper;
 import com.example.content_provider.MainActivity;
-import com.example.content_provider.Model.Data;
+import com.example.content_provider.Model.DataA;
 import com.example.content_provider.R;
 
 public class AddData extends AppCompatActivity {
@@ -32,8 +32,8 @@ public class AddData extends AppCompatActivity {
                 String name_text = name.getText().toString();
                 String phone_text = phone.getText().toString();
 
-                Data data = new Data(name_text, phone_text);
-                long id = db.addData(data);
+                DataA dataA = new DataA(name_text, phone_text);
+                long id = db.addData(dataA);
                 Intent intent = new Intent(AddData.this, MainActivity.class);
                 startActivity(intent);
                 finish();

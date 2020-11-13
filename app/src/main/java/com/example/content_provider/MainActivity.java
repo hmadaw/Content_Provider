@@ -10,7 +10,7 @@ import android.os.Bundle;
 
 import com.example.content_provider.Controler.DataBaseHelper;
 import com.example.content_provider.Controler.RecAdator;
-import com.example.content_provider.Model.Data;
+import com.example.content_provider.Model.DataA;
 import com.example.content_provider.Views.AddData;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     static RecAdator myAdapter;
     FloatingActionButton fb;
     DataBaseHelper db;
-    List<Data> data;
+    static List<DataA> data;
 
 
     @Override
@@ -49,26 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static void notifyAdapter() {
         myAdapter.notifyDataSetChanged();
+        
     }
 
-//    public List<Data> queryGet() {
-//        String uri = "content://com.example.content_provider.Controler/people_db";
-//        data = new ArrayList<>();
-//
-//        Uri students = Uri.parse(uri);
-//        Cursor c = getContentResolver().query(students, null, null, null, "name");
-//
-//        if (c.moveToFirst()) {
-//            do {
-//                Data date = new Data();
-//                date.setId(c.getInt(c.getColumnIndex(Utils.COLUMN_ID)));
-//                date.setName(c.getString(c.getColumnIndex(Utils.COLUMN_NAME)));
-//                date.setPhone(c.getString(c.getColumnIndex(Utils.COLUMN_PHONE)));
-//
-//                data.add(date);
-//            } while (c.moveToNext());
-//        }
-//        c.close();
-//        return data;
-//    }
 }

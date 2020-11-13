@@ -1,22 +1,22 @@
 package com.example.content_provider.Model;
 
-public class Data {
+public class DataA {
     private int id ;
     private String name, phone;
 
-    public Data(String name, String phone) {
+    public DataA(String name, String phone) {
         this.name = name;
         this.phone = phone;
     }
 
-    public Data(int id, String name, String phone) {
+    public DataA(int id, String name, String phone) {
         this.id = id;
         this.name = name;
         this.phone = phone;
 
     }
 
-    public Data() {
+    public DataA() {
 
     }
 

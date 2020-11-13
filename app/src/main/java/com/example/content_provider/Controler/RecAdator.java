@@ -13,19 +13,19 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.content_provider.MainActivity;
-import com.example.content_provider.Model.Data;
+import com.example.content_provider.Model.DataA;
 import com.example.content_provider.R;
 import com.example.content_provider.Views.EditData;
 
 import java.util.List;
 
 public class RecAdator extends RecyclerView.Adapter<RecAdator.MyViewHolder> {
-    List<Data> modelList;
+    List<DataA> modelList;
     Context context;
     DataBaseHelper dataBaseHelper;
 
 
-    public RecAdator(List<Data> modelList, Context context, DataBaseHelper dataBaseHelper) {
+    public RecAdator(List<DataA> modelList, Context context, DataBaseHelper dataBaseHelper) {
         this.modelList = modelList;
         this.context = context;
         this.dataBaseHelper = dataBaseHelper;
@@ -41,7 +41,7 @@ public class RecAdator extends RecyclerView.Adapter<RecAdator.MyViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        Data model=modelList.get(position);
+        DataA model=modelList.get(position);
         holder.id.setText(String.valueOf(model.getId()));
         holder.name.setText(model.getName());
         holder.phone.setText(model.getPhone());

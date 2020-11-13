@@ -9,16 +9,15 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.content_provider.Controler.DataBaseHelper;
-import com.example.content_provider.Controler.DataProvider;
 import com.example.content_provider.MainActivity;
-import com.example.content_provider.Model.Data;
+import com.example.content_provider.Model.DataA;
 import com.example.content_provider.R;
 
 public class EditData extends AppCompatActivity {
     EditText name , phone ;
     Button edit ;
     DataBaseHelper db ;
-    Data personInfo ;
+    DataA personInfo ;
     int position ;
     String str_position ;
     @Override
